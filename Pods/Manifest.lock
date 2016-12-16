@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.0.1)
+  - EstimoteIndoorSDK (2.3.1):
+    - EstimoteSDK (~> 4.1)
+  - EstimoteSDK (4.11.2)
+  - IQKeyboardManagerSwift (4.0.7)
+
+DEPENDENCIES:
+  - Alamofire
+  - EstimoteIndoorSDK
+  - IQKeyboardManagerSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  EstimoteIndoorSDK: 17e898a803c8b85ce23a0f9d1b92712873240f37
+  EstimoteSDK: 79e289736d75b56bbd8ecb4cf518c3a007c6fb49
+  IQKeyboardManagerSwift: 58bbcf46b5cf9fd4ed625d28a60cb2fbae4ab0f4
+
+PODFILE CHECKSUM: 6da824235f2b93f2ea82baab502e26f0bce34525
+
+COCOAPODS: 1.1.1
