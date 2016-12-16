@@ -19,18 +19,29 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var buttonBottomConstraint: NSLayoutConstraint!
     
+    var status: Bool?
+    
     @IBAction func textFieldTapped(_ sender: Any) {
         
         buttonBottomConstraint.constant = 400 
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        status = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        
+        APISettings.bulbID = sender.selectedSegmentIndex.description
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func stopItButtonTapped(_ sender: UIButton) {
+        status = false 
     }
     
     @IBAction func briStepperValueChanged(_ sender: UIStepper) {
@@ -80,8 +91,11 @@ class ViewController: UIViewController {
     
     @IBAction func btnRandomItPressed(_ sender: UIButton) {
 
+        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            self.updateRandomIt()
+            if self.status == true {
+                self.updateRandomIt()
+            }
         }
 
     }

@@ -18,11 +18,12 @@ struct APISettings {
     static let azureURLString = "http://10.10.43.133/api/zoG5NHui7WTIgaJQUkEDl51Rl1xTqYHhyy8wtKVV/lights/1/state"
     static let baseURLString = azureURLString
     static let changeHuePath = "/bri"
+    static var bulbID = "1"
 }
 
 enum Router: URLRequestConvertible {
     
-    static let baseURLString = APISettings.baseURLString
+    static let baseURLString = ("\(APISettings.baseURLString)/\(APISettings.bulbID)/state")
     
     case PUTBri(Int)
     case PUTHue([Double])
